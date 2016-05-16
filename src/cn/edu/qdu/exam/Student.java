@@ -25,14 +25,13 @@ public class Student {
     	while (stu.hasNext()&&ans.hasNext()) {
     		int a=stu.next();
     		int b=ans.next();
-			if (a==b||a==b+32) {
+			if (a!=10&&a!=13&&b!=10&&b!=13&&a==b||a==b+32) {
 				score+=4;
 			}
 		}
     	
     }
     public void recordResult(BufferedWriter out) throws IOException{
-    	score-=32;
     	out.write(name+":");
     	out.write(score.toString()+"\r\n");
     	System.out.println(name+" : "+score);
