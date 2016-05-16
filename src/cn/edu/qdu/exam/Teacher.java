@@ -27,7 +27,8 @@ public class Teacher {
 			for (int i = 0; i < menu.length; i++) {
 				student[i] = new Student();
 				in = new BufferedReader(new FileReader(menu[i]));
-				student[i].setName(menu[i].getName().substring(0, menu[i].getName().indexOf(".")));
+				String name = menu[i].getName();
+				student[i].setName(name.substring(0, name.indexOf(".")));
 				student[i].readAnswer(in);
 				student[i].compare(answer1.rightAnswer);
 				out = new BufferedWriter(new FileWriter(result, true));

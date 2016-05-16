@@ -16,7 +16,8 @@ public class Student {
 	public void readAnswer(BufferedReader in) throws IOException {
 		int temp;
 		while ((temp = in.read()) != -1) {
-			choice.add(temp);
+			if (temp != 10 && temp != 13)
+				choice.add(temp);
 		}
 	}
 
@@ -26,7 +27,7 @@ public class Student {
 		while (stu.hasNext() && ans.hasNext()) {
 			int a = stu.next();
 			int b = ans.next();
-			if (a != 10 && a != 13 && b != 10 && b != 13 && a == b || a == b + 32) {
+			if (a == b || a == b + 32) {
 				score += 4;
 			}
 		}
