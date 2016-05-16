@@ -21,7 +21,7 @@ public class Student {
 		}
 	}
 
-	public void compare(List rightAnswer) {
+	public void compare(List<Integer> rightAnswer) {
 		Iterator<Integer> stu = this.choice.iterator();
 		Iterator<Integer> ans = rightAnswer.iterator();
 		while (stu.hasNext() && ans.hasNext()) {
